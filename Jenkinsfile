@@ -9,10 +9,11 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                git 'https://github.com/ankitabukkigar-max/MyMavenGuavaApp.git'
-            }
-        }
+    steps {
+        git branch: 'main',
+        url: 'https://github.com/ankitabukkigar-max/MyMavenGuavaApp.git'
+    }
+}
 
         stage('Build') {
             steps {
